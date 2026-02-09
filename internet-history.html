@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of the Internet</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background: #f0f0f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 1rem 3rem;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background: #24243e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0.6rem 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.4rem 1.2rem;
+        }
+
+        nav a {
+            color: #c0bfff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.3rem 0;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem 4rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 0.75rem;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #302b63, #24243e);
+            border-radius: 2px;
+        }
+
+        .era {
+            margin-bottom: 3rem;
+        }
+
+        .era h2 {
+            font-size: 1.8rem;
+            color: #302b63;
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        .event {
+            position: relative;
+            background: #fff;
+            border-radius: 10px;
+            padding: 1.4rem 1.6rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            transition: box-shadow 0.2s;
+        }
+
+        .event:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .event::before {
+            content: "";
+            position: absolute;
+            left: -1.95rem;
+            top: 1.6rem;
+            width: 12px;
+            height: 12px;
+            background: #302b63;
+            border: 3px solid #f0f0f5;
+            border-radius: 50%;
+        }
+
+        .event .year {
+            display: inline-block;
+            background: #302b63;
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.15rem 0.7rem;
+            border-radius: 20px;
+            margin-bottom: 0.5rem;
+        }
+
+        .event h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            color: #1a1a2e;
+        }
+
+        .event p {
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .key-figure {
+            display: inline-block;
+            background: #eeeeff;
+            color: #302b63;
+            font-size: 0.82rem;
+            padding: 0.1rem 0.5rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #24243e;
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #c0bfff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .event::before {
+                left: -1.65rem;
+                width: 10px;
+                height: 10px;
+            }
+
+            .event {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>History of the Internet</h1>
+    <p>From Cold War research networks to the global web that connects billions of people today.</p>
+</header>
+
+<nav>
+    <a href="#origins">Origins</a>
+    <a href="#arpanet">ARPANET</a>
+    <a href="#protocols">Protocols</a>
+    <a href="#www">World Wide Web</a>
+    <a href="#browsers">Browser Wars</a>
+    <a href="#web2">Web 2.0</a>
+    <a href="#mobile">Mobile Era</a>
+    <a href="#modern">Modern Internet</a>
+</nav>
+
+<main>
+
+    <!-- Origins -->
+    <section class="era" id="origins">
+        <h2>The Origins</h2>
+
+        <div class="timeline">
+            <div class="event">
+                <span class="year">1957</span>
+                <h3>Sputnik and the Birth of ARPA</h3>
+                <p>The Soviet Union's launch of Sputnik prompted the United States to create the Advanced Research Projects Agency (ARPA) within the Department of Defense, aiming to ensure American technological leadership.</p>
+                <span class="key-figure">President Eisenhower</span>
+            </div>
+
+            <div class="event">
+                <span class="year">1961</span>
+                <h3>Packet Switching Theory</h3>
+                <p>Leonard Kleinrock at MIT published his theory on packet switching, proposing that data could be broken into packets and sent independently across a network rather than requiring a dedicated circuit.</p>
+                <span class="key-figure">Leonard Kleinrock</span>
+            </div>
+
+            <div class="event">
+                <span class="year">1962</span>
+                <h3>Galactic Network Concept</h3>
+                <p>J.C.R. Licklider of MIT envisioned a "Galactic Network" of interconnected computers through which anyone could access data and programs from any site. He became the first head of ARPA's computer research program.</p>
+                <span class="key-figure">J.C.R. Licklider</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARPANET -->
+    <section class="era" id="arpanet">
+        <h2>ARPANET Era</h2>
+
+        <div class="timeline">
+            <div class="event">
+                <span class="year">1969</span>
+                <h3>ARPANET Goes Live</h3>
+                <p>The first message was sent over ARPANET from UCLA to Stanford Research Institute on October 29, 1969. The intended message was "LOGIN" but the system crashed after "LO." The network initially connected four universities.</p>
+                <span class="key-figure">Charley Kline &amp; Bill Duvall</span>
+            </div>
+
+            <div class="event">
+                <span class="year">1971</span>
+                <h3>First Email</h3>
+                <p>Ray Tomlinson sent the first network email and introduced the "@" symbol to separate user names from computer names. Email quickly became the most popular application on the early internet.</p>
+                <span class="key-figure">Ray Tomlinson</span>
+            </div>
+
+            <div class="event">
+                <span class="year">1973</span>
+                <h3>International Connections</h3>
+                <p>ARPANET made its first international connections to the University College of London (England) and the Royal Radar Establishment (Norway), marking the beginning of a global network.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Protocols -->
+    <section class="era" id="protocols">
+        <h2>Protocols &amp; Standards</h2>
+
+        <div class="timeline">
+            <div class="event">
+                <span class="year">1974</span>
+                <h3>TCP Specification Published</h3>
+                <p>Vint Cerf and Bob Kahn published "A Protocol for Packet Network Intercommunication," defining the Transmission Control Program (TCP) that would become the foundation of internet communication.</p>
+                <span class="key-figure">Vint Cerf &amp; Bob Kahn</span>
+            </div>
+
+            <div class="event">
+                <span class="year">1978</span>
+                <h3>TCP/IP Split</h3>
+                <p>TCP was split into TCP and IP (Internet Protocol), creating the TCP/IP protocol suite. This layered approach allowed different networks to interconnect regardless of their underlying technology.</p>
+            </div>
+
+            <div class="event">
+                <span class="year">1983</span>
+                <h3>ARPANET Adopts TCP/IP</h3>
+                <p>On January 1, 1983 ("Flag Day"), ARPANET officially switched from NCP to TCP/IP. The Domain Name System (DNS) was also introduced this year, replacing numeric addresses with human-readable names.</p>
+                <span class="key-figure">Paul Mockapetris (DNS)</span>
+            </div>
+
+            <div class="event">
+                <span class="year">1986</span>
+                <h3>NSFNET Backbone</h3>
+                <p>The National Science Foundation created NSFNET, connecting five supercomputer centers at 56 Kbps. It rapidly expanded and effectively became the new backbone of the internet, opening access beyond military and academic use.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- World Wide Web -->
+    <section class="era" id="www">
+        <h2>The World Wide Web</h2>
+
+        <div class="timeline">
+            <div class="event">
+                <span class="year">1989</span>
+                <h3>Tim Berners-Lee Proposes the Web</h3>
+                <p>Working at CERN, Tim Berners-Lee proposed a hypertext system for sharing information among researchers. His proposal outlined three fundamental technologies: HTML, URI (URL), and HTTP.</p>
+                <span class="key-figure">Tim Berners-Lee</span>
+            </div>
+
+            <div class="event">
+                <span class="year">1990</span>
+                <h3>First Web Page and Browser</h3>
+                <p>Berners-Lee created the first web server, the first web browser (called WorldWideWeb), and the first web page, which described the project itself. The foundation of the modern web was born.</p>
+            </div>
+
+            <div class="event">
+                <span class="year">1991</span>
+                <h3>The Web Goes Public</h3>
+                <p>On August 6, 1991, the World Wide Web became publicly available. Berners-Lee posted a summary of the project on the alt.hypertext newsgroup, inviting collaboration from around the world.</p>
+            </div>
+
+            <div class="event">
+                <span class="year">1993</span>
+                <h3>Mosaic Browser Launches</h3>
+                <p>The Mosaic web browser, developed at the National Center for Supercomputing Applications (NCSA), brought the web to a wider audience with its graphical interface and ability to display images alongside text.</p>
+                <span class="key-figure">Marc Andreessen</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Browser Wars -->
+    <section class="era" id="browsers">
+        <h2>The Browser Wars &amp; Dot-Com Era</h2>
+
+        <div class="timeline">
+            <div class="event">
+                <span class="year">1994</span>
+                <h3>Netscape Navigator</h3>
+                <p>Marc Andreessen co-founded Netscape Communications and released Netscape Navigator, which quickly dominated the browser market. The same year, the World Wide Web Consortium (W3C) was founded to develop web standards.</p>
+                <span class="key-figure">Marc Andreessen &amp; Jim Clark</span>
+            </div>
+
+            <div class="event">
+                <span class="year">1995</span>
+                <h3>Commercialization Explodes</h3>
+                <p>The internet was transformed by a wave of commercial activity. Amazon and eBay launched. Microsoft released Internet Explorer, sparking the "browser wars." JavaScript was created in just 10 days at Netscape.</p>
+                <span class="key-figure">Brendan Eich (JavaScript)</span>
+            </div>
+
+            <div class="event">
+                <span class="year">1998</span>
+                <h3>Google is Founded</h3>
+                <p>Larry Page and Sergey Brin, two Stanford PhD students, founded Google based on their PageRank algorithm. Its clean interface and superior search results would make it the dominant gateway to the web.</p>
+                <span class="key-figure">Larry Page &amp; Sergey Brin</span>
+            </div>
+
+            <div class="event">
+                <span class="year">2000</span>
+                <h3>Dot-Com Bubble Bursts</h3>
+                <p>The NASDAQ peaked in March 2000 and then collapsed. Hundreds of internet startups went bankrupt. However, the crash cleared the way for more sustainable companies and business models to emerge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web 2.0 -->
+    <section class="era" id="web2">
+        <h2>Web 2.0 &amp; Social Media</h2>
+
+        <div class="timeline">
+            <div class="event">
+                <span class="year">2001</span>
+                <h3>Wikipedia Launches</h3>
+                <p>Jimmy Wales and Larry Sanger launched Wikipedia, a free online encyclopedia that anyone could edit. It became one of the defining examples of collaborative, user-generated content on the web.</p>
+                <span class="key-figure">Jimmy Wales &amp; Larry Sanger</span>
+            </div>
+
+            <div class="event">
+                <span class="year">2004</span>
+                <h3>Facebook and the Social Web</h3>
+                <p>Mark Zuckerberg launched Facebook from his Harvard dorm room. Combined with the rise of blogs, RSS feeds, and platforms like Flickr, the web shifted from static pages to dynamic, user-driven content&mdash;the era known as "Web 2.0."</p>
+                <span class="key-figure">Mark Zuckerberg</span>
+            </div>
+
+            <div class="event">
+                <span class="year">2005</span>
+                <h3>YouTube and Online Video</h3>
+                <p>YouTube was founded and quickly became the go-to platform for sharing video online. Its "Broadcast Yourself" slogan captured the spirit of the era. Google acquired it in 2006 for $1.65 billion.</p>
+                <span class="key-figure">Chad Hurley, Steve Chen &amp; Jawed Karim</span>
+            </div>
+
+            <div class="event">
+                <span class="year">2006</span>
+                <h3>Twitter and Microblogging</h3>
+                <p>Twitter launched, introducing the concept of microblogging with 140-character messages. It became a real-time communication platform that influenced news, politics, and culture worldwide.</p>
+                <span class="key-figure">Jack Dorsey</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Era -->
+    <section class="era" id="mobile">
+        <h2>The Mobile Revolution</h2>
+
+        <div class="timeline">
+            <div class="event">
+                <span class="year">2007</span>
+                <h3>The iPhone Changes Everything</h3>
+                <p>Apple launched the iPhone, combining a phone, music player, and internet communicator into one device. Its touch-screen interface and mobile Safari browser redefined how people accessed the internet.</p>
+                <span class="key-figure">Steve Jobs</span>
+            </div>
+
+            <div class="event">
+                <span class="year">2008</span>
+                <h3>App Stores and Android</h3>
+                <p>Apple launched the App Store, and Google released Android. These platforms created an entirely new software ecosystem. Mobile apps became the primary way many people interacted with online services.</p>
+            </div>
+
+            <div class="event">
+                <span class="year">2010</span>
+                <h3>Instagram and the Visual Web</h3>
+                <p>Instagram launched, emphasizing photo sharing with filters. It symbolized the shift toward visual, mobile-first internet experiences. Within two years, Facebook acquired it for $1 billion.</p>
+                <span class="key-figure">Kevin Systrom &amp; Mike Krieger</span>
+            </div>
+
+            <div class="event">
+                <span class="year">2013</span>
+                <h3>Streaming Takes Over</h3>
+                <p>Netflix began producing original content with "House of Cards," signaling the shift from traditional TV to internet streaming. Spotify, launched in 2008, was also transforming how people consumed music.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Internet -->
+    <section class="era" id="modern">
+        <h2>The Modern Internet</h2>
+
+        <div class="timeline">
+            <div class="event">
+                <span class="year">2016</span>
+                <h3>AI Assistants Go Mainstream</h3>
+                <p>Voice-activated AI assistants like Amazon Alexa and Google Assistant entered millions of homes, making the internet accessible without a screen. The Internet of Things (IoT) began connecting everyday devices.</p>
+            </div>
+
+            <div class="event">
+                <span class="year">2020</span>
+                <h3>The Pandemic Internet</h3>
+                <p>COVID-19 lockdowns made the internet essential for daily life. Remote work, online education, telehealth, and video conferencing (Zoom) surged. Global internet traffic increased by roughly 40% in a single year.</p>
+            </div>
+
+            <div class="event">
+                <span class="year">2022</span>
+                <h3>Generative AI Emerges</h3>
+                <p>The release of large language models and generative AI tools marked a new era for the internet. These systems could produce text, images, and code, raising profound questions about creativity, information, and the future of the web.</p>
+            </div>
+
+            <div class="event">
+                <span class="year">Today</span>
+                <h3>5+ Billion Users Online</h3>
+                <p>Over 5 billion people now use the internet&mdash;more than 60% of the global population. From a four-node research network in 1969, the internet has become the most transformative technology in human history.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>History of the Internet &mdash; A timeline of the technology that changed the world.</p>
+</footer>
+
+</body>
+</html>
